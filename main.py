@@ -147,10 +147,18 @@ def save_uploaded_file(uploaded_file):
         return False
 
 def main():
+    if 'selected_garment' not in st.session_state:
+        st.session_state['selected_garment'] = None
+    if 'active_tab' not in st.session_state:
+        st.session_state['active_tab'] = 0
+
     st.title('Fashion Recommendation System with Virtual Try-On')
     
     tab1, tab2 = st.tabs(["Recommendation System", "Virtual Try-On"])
-    
+    # Switch to appropriate tab based on session state
+    if st.session_state['active_tab'] == 1:
+        tab2.active = True
+
     with tab1:
         st.header("Get Similar Fashion Recommendations")
         uploaded_file = st.file_uploader("Choose your fashion image", key="fashion_image")
@@ -171,7 +179,15 @@ def main():
                         img_idx = indices[0][idx]
                         img_path = img_files_list[img_idx]["image_path"]
                         st.image(img_path)
-                        st.write(f"[View Product]({img_files_list[img_idx]['product_url']})")
+                        # st.write(f"[View Product]({img_files_list[img_idx]['product_url']})")
+                        # st.write(f"[View Virtual Try On]({img_path})")
+                        # Add Try-On button for each recommendation
+                        if st.button(f"Try On #{idx+1}"):
+                            # Store the selected garment image path in session state
+                            st.session_state['selected_garment'] = img_path
+                            # Switch to tab 2
+                            st.session_state['active_tab'] = 1
+
     
     with tab2:
         st.header("Virtual Try-On")
@@ -181,23 +197,23 @@ def main():
             base_url="https://api.klingai.com"
         )
         
-        col1, col2 = st.columns(2)
-        with col1:
-            person_image = st.file_uploader("Upload Person Image", type=['jpg', 'jpeg', 'png'], key="person_image")
-        with col2:
-            garment_image = st.file_uploader("Upload Garment Image", type=['jpg', 'jpeg', 'png'], key="garment_image")
-            
-        if person_image and garment_image:
-            seed = random.randint(0, 999999)
-            if st.button("Try On"):
-                person_img = np.array(Image.open(person_image))
-                garment_img = np.array(Image.open(garment_image))
-                
-                result_img, status = client.try_on(person_img, garment_img, seed)
-                if result_img is not None:
-                    st.image(result_img, caption="Virtual Try-On Result")
-                else:
-                    st.error(status)
+        # If garment was selected from recommendations
+        if st.session_state['selected_garment']:
+            st.write("Selected Garment:")
+            st.image(st.session_state['selected_garment'])
+            person_image = st.file_uploader("Upload Person Image", type=['jpg', 'jpeg', 'png'])
+
+            if person_image:
+                seed = random.randint(0, 999999)
+                if st.button("Try On"):
+                    person_img = np.array(Image.open(person_image))
+                    garment_img = np.array(Image.open(st.session_state['selected_garment']))
+                    
+                    result_img, status = client.try_on(person_img, garment_img, seed)
+                    if result_img is not None:
+                        st.image(result_img, caption="Virtual Try-On Result")
+                    else:
+                        st.error(status)
 
 if __name__ == "__main__":
     main()
