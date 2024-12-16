@@ -48,7 +48,7 @@ Welcome to the **Fashion Recommendation and Virtual Try-On System**! This reposi
    ```
 2. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/fashion-tryon.git
+   git clone https://github.com/syedanida/FashionRecommender-and-VirtualTryOn.git
    ```
 3. Ensure the following files are in the repository:
    - `image_features_embedding.pkl`: Pre-computed feature embeddings.
@@ -58,13 +58,17 @@ Welcome to the **Fashion Recommendation and Virtual Try-On System**! This reposi
 
 1. Navigate to the project directory:
    ```bash
-   cd fashion-tryon
+   cd FashionRecommender-and-VirtualTryOn
    ```
-2. Start the Streamlit app:
+2. Run app.py:
+   ```bash
+   python run.py
+   ```
+3. Start the Streamlit app:
    ```bash
    streamlit run app.py
    ```
-3. Open the application in your browser at `http://localhost:8501`.
+4. Open the application in your browser at `http://localhost:8501`.
 
 ---
 
@@ -118,23 +122,6 @@ Welcome to the **Fashion Recommendation and Virtual Try-On System**! This reposi
 - **Seasonal Recommendations**: Suggest outfits based on seasons and current trends.
 - **Outfit Planning**: Integrate tools for assembling complete looks.
 - **Multimodal Enhancements**: Incorporate textual descriptions and user preferences for personalized results.
-
----
-
-## Contributing
-
-We welcome contributions from the community! Feel free to submit a pull request or report issues.
-
-### Steps to Contribute:
-1. Fork the repository.
-2. Create a feature branch.
-3. Commit your changes and submit a pull request.
-
----
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ---
 
