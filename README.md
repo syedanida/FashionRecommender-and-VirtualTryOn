@@ -115,6 +115,11 @@ Welcome to the **Fashion Recommendation and Virtual Try-On System**! This reposi
 
 ---
 
+## Hugging Face deployment
+- https://huggingface.co/spaces/Rishi3499/Fashion-App-With-Virtual-Try-On
+
+---
+
 ## Insights and Learnings
 
 - **Model Performance**: Achieved high accuracy with minimal misclassification.
