@@ -75,10 +75,13 @@ Welcome to the **Fashion Recommendation and Virtual Try-On System**! This reposi
 ## Screenshots
 
 ### **Recommendation System**
-![Recommendation System UI](assets/recommendation_system.png)
+![Recommendation System UI](https://github.com/syedanida/FashionRecommender-and-VirtualTryOn/blob/main/demoimage1.png)
+
+![image](https://github.com/syedanida/FashionRecommender-and-VirtualTryOn/blob/main/demoimage2.png)
 
 ### **Virtual Try-On**
-![Virtual Try-On UI](assets/virtual_tryon.png)
+![Virtual Try-On UI](https://github.com/syedanida/FashionRecommender-and-VirtualTryOn/blob/main/demoimage3.png)
+![Virtual Try-On UI](https://github.com/syedanida/FashionRecommender-and-VirtualTryOn/blob/main/demoimage4.png)
 
 ---
 
