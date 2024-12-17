@@ -2,9 +2,6 @@
 
 Welcome to the **Fashion Recommendation and Virtual Try-On System**! This repository houses a state-of-the-art application that combines advanced machine learning techniques and an intuitive user interface to recommend fashion items and enable virtual try-ons. Whether you're a fashion enthusiast or a data science buff, this project showcases the intersection of AI, computer vision, and style.  
 
-![Local Image](<img width="1512" alt="Screenshot 2024-12-16 at 9 10 19 PM" src="https://github.com/user-attachments/assets/28ec55f4-d363-4e90-9e65-89389dc3bd0d" />
-)
-
 ---
 
 ## Key Features
