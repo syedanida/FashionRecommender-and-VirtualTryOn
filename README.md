@@ -144,4 +144,11 @@ Welcome to the **Fashion Recommendation and Virtual Try-On System**! This reposi
 
 ---
 
+## Quick Links
+- [Slides](https://github.com/syedanida/FashionRecommender-and-VirtualTryOn/blob/main/Presentation%20Slides.pdf)
+- [Project Report](https://github.com/syedanida/FashionRecommender-and-VirtualTryOn/blob/main/Project%20Report.pdf)
+- [CRISP-DM Methodology Report](https://github.com/syedanida/FashionRecommender-and-VirtualTryOn/blob/main/CRISP-DM%20Methodology.pdf)
+
+---
+
 Enjoy exploring and contributing to the **Fashion Recommendation and Virtual Try-On System**!
