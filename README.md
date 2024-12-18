@@ -9,17 +9,17 @@ Welcome to the **Fashion Recommendation and Virtual Try-On System**! This reposi
 ### 1. **Recommendation System**
 - **ResNet50** is used to extract meaningful features from images, ensuring accurate and efficient similarity detection.
 - Nearest Neighbors algorithm suggests the top 5 most visually similar items.
-- Explore various embeddings and feature visualizations like **TSNE** for deeper insights.
+- Visualizations like t-SNE provide deeper insights into embeddings and feature relationships.
 
 ### 2. **Virtual Try-On**
 - Integrates with the **KlingAI API** to enable virtual try-on functionality.
-- Upload your image and a garment image, and let the system combine them seamlessly.
-- Process includes real-time task management, image retrieval, and enhancement.
+- Users upload an apparel image, and the system seamlessly combines it with the user's image.
+- The process includes real-time task management, image retrieval, and enhancement.
 
 ### 3. **Data Exploration and Visualization**
-- **Confusion Matrix**, **ROC Curve**, and **Precision-Recall Curve** provide performance metrics for the recommendation system.
-- **TensorBoard Dashboards** track training and validation metrics, aiding hyperparameter tuning.
-- **SHAP Values** highlight key features driving recommendations, such as color and style.
+- **Feature Extraction and Normalization**: The fashion images are processed through the ResNet50 model to extract meaningful features, which are then normalized using L2 normalization to ensure uniformity for similarity comparison.
+- **Nearest Neighbors Visualization**: The top 5 most visually similar items are retrieved using the Nearest Neighbors algorithm, helping visualize how closely related different fashion items are based on their features.
+- **Product Details Exploration**: The recommendation system not only suggests similar items but also allows users to explore product details such as the brand, category, and additional style information, providing a comprehensive view of the recommended items alongside their images.
 
 ---
 
